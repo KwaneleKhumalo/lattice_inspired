@@ -55,7 +55,7 @@ app.get('/todo-items', async(req, res) => {
 
 
 // Goals Route
-app.get('/goals', (req, res) => {
+app.get('/Goal-Management', (req, res) => {
     res.sendFile(__dirname + '/src/goals.html')
 });
 

@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goals</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <title>Goal Management | Tackle your goals!</title>
 </head>
 <body>
-    <h1>Goals</h1>
+    <section>
+
+        <div class="container">
+            <div class="todo-list-container">
+                <i class="material-icons close-btn">close</i>
+                <form action="/todo-item" class="todo-form" method="post">
+                    <h1>Create Item</h1>
+                    <input type="text" placeholder="Title" name="todoTitle" class="todo-input">
+                    <input type="text" placeholder="Description" name="todoDesc" class="todo-input"> <span></span>
+                    <input type="date" name="dueDate" class="todo-input">
+                    <button type="submit" class="submit-todo">Add Item
+                        <i class="material-icons">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="task-header">
+                <h1>Goal Management</h1>
+                <button class="create-btn">Create
+                    <i class="material-icons right">arrow_drop_down</i>
+                </button>
+            </div>
+
+            <hr class="container-divider">
+            <strong>Coming Soon...</strong>
+
+        </div>
+
+    </section>
+
+
+        <!-- sidenav -->
+        <div class="side-nav z-depth-3">
+            <div class="top-nav-items">
+                <a href="/"> <i class="material-icons">dashboard</i>Dashboard</a>
+                <a href=""> <i class="material-icons">person</i>Profile</a>
+                <div class="divider">
+                    <hr>
+                </div>
+                <a href="/todo-items"> <i class="material-icons">list</i>Daily Items</a>
+                <a href="/Goal-Management"> <i class="material-icons">track_changes</i>Goals</a>
+            </div>
+    
+            <div class="bottom-nav-items">
+                <a class="profile-img"> <i class="material-icons profile-img">account_circle</i> </a>
+            </div>
+        </div>
 </body>
 </html>
