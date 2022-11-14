@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <script defer src="./scripts/todo.js"></script>
+
+    <title>Todo</title>
+</head>
+<body>
+    <section>
+
+        <div class="container">
+            <div class="todo-list-container">
+                <i class="material-icons close-btn">close</i>
+                <form action="/todo-item" class="todo-form" method="post">
+                    <!-- <div class="message">
+                        <strong class="fail-message">
+                            Your request could not be completed. Please try again
+                        </strong>
+                    </div> -->
+
+                    <h1>Create Item</h1>
+                    <input type="text" placeholder="Title" name="todoTitle" class="todo-input">
+                    <input type="text" placeholder="Description" name="todoDesc" class="todo-input"> <span></span>
+                    <input type="date" name="dueDate" class="todo-input">
+                    <button type="submit" class="submit-todo">Add Item
+                        <i class="material-icons">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="task-header">
+                <h1>Task Board</h1>
+                <button class="create-btn">Create
+                    <i class="material-icons right">arrow_drop_down</i>
+                </button>
+            </div>
+
+            <div class="todo-search">
+                <input class="todo-search-input" type="text" name="search-input" placeholder="Search Items...">
+                <button class="todo-search-filter-btn">filter
+                    <i class="material-icons right">filter_list</i>
+                </button>
+            </div>
+
+            <hr class="container-divider">
+        </div>
+
+        <div class="table-container">
+            <div class="todo-results">
+                <div class="result-divider">
+                    <strong>|</strong>
+                </div>
+                <div class="objectives">
+                    <strong class="total-list"></strong>
+                </div>
+            </div>
+
+            <hr class="container-divider">
+            <div class="todo-table">
+                <div class="todo-table-header">
+                    <div class="todo-table-header-title">
+                        <strong class="title">Title</strong>
+                        <strong class="table-desc">Description</strong>
+                    </div>
+                    <div class="todo-table-header-items">
+                        <strong>Date Created
+                            <i class="material-icons">unfold_more</i>
+                        </strong>
+                        <strong>Due Date
+                            <i class="material-icons">unfold_more</i>
+                        </strong>
+                        <!-- <strong>Date Updated
+                            <i class="material-icons">unfold_more</i>
+                        </strong>
+                        <strong>In Progress
+                            <i class="material-icons">unfold_more</i>
+                        </strong> -->
+                    </div>
+                </div>
+            </div>
+            <hr class="container-divider">
+            <div class="table-body-container">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- sidenav -->
+        <div class="side-nav z-depth-3">
+            <div class="top-nav-items">
+                <a href="/"> <i class="material-icons">dashboard</i>Dashboard</a>
+                <a href=""> <i class="material-icons">person</i>Profile</a>
+                <div class="divider">
+                    <hr>
+                </div>
+                <a href="/todo-items"> <i class="material-icons">list</i>Todo Items</a>
+                <a href="/goals"> <i class="material-icons">track_changes</i>Goals</a>
+            </div>
+    
+            <div class="bottom-nav-items">
+                <a class="profile-img"> <i class="material-icons profile-img">account_circle</i> </a>
+            </div>
+        </div>
+</body>
+</html>
