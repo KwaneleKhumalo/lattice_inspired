@@ -4,7 +4,7 @@
 2 - Run NPM Install
 3 - nodemon/node app OR node --watch app
 4 - localhost:3000
-5 - Commit and push changes to draft branch
+5 - Commit and push changes to draft branch (git push draft)
 
 
 ** Technologies Used: 
