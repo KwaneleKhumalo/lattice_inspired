@@ -67,41 +67,22 @@ app.put('/todo-item/:itemID', async ( req, res ) => {
     await storage.init();
     let data = await storage.getItem('todo-item');
     const { todoTitle } = req.body;
+    const { todoDesc } = req.body;
     console.log(todoTitle);
+
     const singleItem = data.find((item) => item.itemID === Number(itemID))
 
     if(singleItem) {
+        singleItem.todoTitle = todoTitle; //updates to the new title
+        await storage.setItem('todo-item', data)
         console.log('exist');
-    } else{
-        console.log('does not');
+    } else {
+        console.log('Record does not exist!');
     }
 
-    const newRecord = data.map((dailyItem) => {
-        if(dailyItem.itemID === Number(itemID)){
-            dailyItem.todoTitle = todoTitle;
-            
-        } else { 
-            return dailyItem;
-        }
-    })
     
-    res.json(newRecord);
+    res.json(singleItem);
     
-    
-    
-    // data.map((dailyItem) => { 
-    //     if(dailyItem.itemID === Number(itemID))
-    //     {
-    //         console.log('There is a match');
-    //     } else if(!dailyItem.itemID !== Number(itemID))
-    //     {
-    //         console.log('There is no match');
-    //     }
-    // })
-
-
-    
-    // res.send('Hello World')
 });
 
 
