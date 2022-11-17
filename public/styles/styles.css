@@ -130,6 +130,7 @@ header
     top: 10%;
     font-size: 2rem;
     cursor: pointer;
+    color: #234345;
 }
 
 .pending-tasks
@@ -192,7 +193,7 @@ hr
 {
     font-size: 40px;
     cursor: pointer;
-    color: orange;
+    color: white;
 }
 
 /*----------------------------------Media Queries-------------------------- */
