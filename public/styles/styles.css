@@ -186,6 +186,9 @@ hr
     color: orange;
 }
 
+/*----------------------------------Media Queries-------------------------- */
+
+/* Devices less than 768px */
 @media (max-width: 767.98px)
 {
     .header-nav {
@@ -228,7 +231,7 @@ hr
         display: none;
     }
 }
-
+/* Devices 768px and up */
 @media (min-width: 768px)
 {
     header {
