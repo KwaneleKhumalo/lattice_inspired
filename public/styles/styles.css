@@ -3,7 +3,16 @@
  - #2c3e50 - Darker
  - #95a5a6 - Concrete Gray
  - #7f8c8d darker gray
+
+ New Colors 
+
+ #234345 - Emerald Forest (side-nav, pending-task, search-icon)
+ #326063 - Under the Sea (header)
+ 
+
 */
+
+
 
 
 * 
@@ -41,7 +50,7 @@ header
     flex-direction: column;
     gap: 3rem;
     padding: 0px 4rem;
-    height: 40vh;
+    height: 100vh;
     position: absolute;
     right: 0;
     width: 95%;
@@ -125,7 +134,7 @@ header
 
 .pending-tasks
 {
-    background-color: #0000006a;
+    background-color: #234345;
     padding: 10px;
     color: white;
     width: 30%;
@@ -147,7 +156,7 @@ header
     justify-content: space-between;
     width: 5%;
     height: 100vh;
-    background-color: #2c3e50;
+    background-color: #234345;
     /* background-color: rgb(3, 3, 71); */
 }
 
@@ -203,7 +212,7 @@ hr
 
     header {
         gap: 1em;
-        height: 25vh;
+        /* height: 25vh; */
     }
     .header-body {
         gap: 5em
@@ -236,7 +245,7 @@ hr
 {
     header {
         gap: 1em;
-        height: 25vh;
+        /* height: 25vh; */
     }
 
     .header-body {
