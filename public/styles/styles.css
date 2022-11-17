@@ -17,6 +17,8 @@
 body
 {
     position: relative;
+    /* Needed for responsiveness */
+    display:flex; 
 }
 /*----------------------------------------------------------- section -------------------------- */
 section
@@ -182,4 +184,73 @@ hr
     font-size: 40px;
     cursor: pointer;
     color: orange;
+}
+
+@media (max-width: 767.98px)
+{
+    .header-nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px
+    }
+
+    .welcome {
+        display: none;
+    }
+
+    header {
+        gap: 1em;
+        height: 25vh;
+    }
+    .header-body {
+        gap: 5em
+    }
+
+    .search-icon {
+        left: 85%;
+    }
+
+    .search > input,
+    .pending-tasks {
+        width: 90%;
+    }
+
+    .side-nav {
+        width: auto;
+        padding: 5px;
+    }
+
+    .side-nav a {
+        padding: 15px 10px;
+    }
+
+    span {
+        display: none;
+    }
+}
+
+@media (min-width: 768px)
+{
+    header {
+        gap: 1em;
+        height: 25vh;
+    }
+
+    .header-body {
+        gap: 6em;
+    }
+
+    .search-icon {
+        left: 60%;
+    }
+
+    /* .search > input, */
+    .pending-tasks {
+        width: 75%;
+    }
+
+    .side-nav {
+        width: auto;
+        padding: 0px;
+    }
 }
