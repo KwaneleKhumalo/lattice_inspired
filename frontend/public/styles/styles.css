@@ -1,10 +1,10 @@
 /* 
- - #34495e - Dark Blue
- - #2c3e50 - Darker
- - #95a5a6 - Concrete Gray
- - #7f8c8d darker gray
-*/
+New Colors 
 
+ #234345 - Emerald Forest (side-nav, pending-task, search-icon)
+ #326063 - Under the Sea (header)
+ 
+*/
 
 * 
 {
@@ -16,7 +16,9 @@
 
 body
 {
-    position: relative;
+    /* Needed for responsiveness */
+    display:flex; 
+    flex-direction: row-reverse;
 }
 /*----------------------------------------------------------- section -------------------------- */
 section
@@ -25,9 +27,6 @@ section
     display: flex;
     flex-direction: column;
     height: 100vh;
-    position: absolute;
-    left: 0;
-    right: 0;
     width: 100%;
 }
 
@@ -38,11 +37,9 @@ header
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 0px 4rem;
-    height: 40vh;
-    position: absolute;
-    right: 0;
-    width: 95%;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
     background-color: #326063;
 }
 
@@ -52,7 +49,7 @@ header
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1rem 2rem;
 }
 
 .today
@@ -84,7 +81,7 @@ header
 .header-body
 {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     flex-direction: column;
     align-items: center;
     height: 60%;
@@ -115,16 +112,17 @@ header
 .search-icon
 {
     position: absolute;
-    left: 62.5%;
+    /* left: 62.5%; */
     top: 10%;
     font-size: 2rem;
     cursor: pointer;
+    color: #234345;
 }
 
 .pending-tasks
 {
-    background-color: #0000006a;
-    padding: 10px;
+    background-color: #234345;
+    padding: 20px;
     color: white;
     width: 30%;
     border-radius: 20px;
@@ -135,8 +133,6 @@ header
 /*----------------------------------------------------------- Side Nav-------------------------- */
 .side-nav
 {
-    position: absolute;
-    top: 0;
     display: flex;
     padding: 20px;
     gap: 20px;
@@ -145,7 +141,7 @@ header
     justify-content: space-between;
     width: 5%;
     height: 100vh;
-    background-color: #2c3e50;
+    background-color: #234345;
     /* background-color: rgb(3, 3, 71); */
 }
 
@@ -181,5 +177,117 @@ hr
 {
     font-size: 40px;
     cursor: pointer;
-    color: orange;
+    color: white;
+}
+
+/*----------------------------------Media Queries-------------------------- */
+
+/* Devices 768px and up */
+@media (min-width: 768px)
+{   
+    .date 
+    {
+        padding-right: 50px;
+    }
+
+    header 
+    {
+        gap: 1em;
+    }
+
+    .search-icon 
+    {
+        left: 71%;
+    }
+
+    .search > input 
+    {
+        width: 50%;
+    }
+
+    .pending-tasks 
+    {
+        width: 75%;
+    }
+
+    .side-nav 
+    {
+        width: auto;
+        padding: 0px;
+    }
+}
+
+/* Devices 1200px and up */
+@media  (min-width: 1200px)
+{
+    .search-icon 
+    {
+        left: 72.5%;
+    }
+}
+
+/* Devices less than 768px */
+@media (max-width: 767.98px)
+{
+    .header-nav 
+    {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .welcome 
+    {
+        display: none;
+    }
+
+    header 
+    {
+        gap: 1em;
+    }
+    
+    .search-icon 
+    {
+        left: 68%;
+    }
+
+    .search > input 
+    {
+        width: 50%;
+    }
+
+    .pending-tasks 
+    {
+        width: 75%;
+    }
+
+    .side-nav 
+    {
+        width: auto;
+        padding: 5px;
+    }
+
+    .side-nav a 
+    {
+        padding: 15px 10px;
+    }
+
+    span 
+    {
+        display: none;
+    }
+}
+
+/* Devices less than 480px */
+@media (max-width: 480px) 
+{
+    .search-icon 
+    {
+        left: 70%;
+    }
+
+    .search > input 
+    {
+        width: 65%;
+    }
 }
