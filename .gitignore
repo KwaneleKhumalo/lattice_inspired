@@ -2,3 +2,4 @@
 /.node-persist
 /package-lock.json
 /mongo.text
+/.DS_Store
