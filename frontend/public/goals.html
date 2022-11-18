@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/todo.css">
 
     <title>Goal Management | Tackle your goals!</title>
 </head>
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="todo-list-container">
                 <i class="material-icons close-btn">close</i>
-                <form action="/todo-item" class="todo-form" method="post">
+                <form class="todo-form">
                     <h1>Create Item</h1>
                     <input type="text" placeholder="Title" name="todoTitle" class="todo-input">
                     <input type="text" placeholder="Description" name="todoDesc" class="todo-input"> <span></span>
@@ -41,18 +41,17 @@
         </div>
 
     </section>
-
-
+    
         <!-- sidenav -->
         <div class="side-nav z-depth-3">
             <div class="top-nav-items">
-                <a href="/"> <i class="material-icons">dashboard</i>Dashboard</a>
+                <a href="index.html"> <i class="material-icons">dashboard</i>Dashboard</a>
                 <a href=""> <i class="material-icons">person</i>Profile</a>
                 <div class="divider">
                     <hr>
                 </div>
-                <a href="/todo-items"> <i class="material-icons">list</i>Daily Items</a>
-                <a href="/Goal-Management"> <i class="material-icons">track_changes</i>Goals</a>
+                <a href="todo.html"> <i class="material-icons">list</i>Daily Items</a>
+                <a href="goals.html"> <i class="material-icons">track_changes</i>Goals</a>
             </div>
     
             <div class="bottom-nav-items">
