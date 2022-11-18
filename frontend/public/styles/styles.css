@@ -18,7 +18,7 @@ body
 {
     position: relative;
 }
-/*----------------------------------------------------------- section -------------------------- */
+/*----------------------------------------------- section------------------------- */
 section
 {
     height: 100vh;
@@ -31,7 +31,7 @@ section
     width: 100%;
 }
 
-/*----------------------------------------------------------- Header -------------------------- */
+/*------------------------------------------------- Header -------------------------- */
 
 header
 {
@@ -39,7 +39,7 @@ header
     flex-direction: column;
     gap: 3rem;
     padding: 0px 4rem;
-    height: 40vh;
+    height: 100vh;
     position: absolute;
     right: 0;
     width: 95%;
@@ -124,15 +124,32 @@ header
 .pending-tasks
 {
     background-color: #0000006a;
-    padding: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
     color: white;
     width: 30%;
     border-radius: 20px;
-    height: 100%;
+}
+
+.pending-task-items
+{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.list-divider
+{
+    border: 1px solid rgba(211, 211, 211, 0.25);
 }
 
 
-/*----------------------------------------------------------- Side Nav-------------------------- */
+/*--------------------------------------------- Side Nav-------------------------- */
 .side-nav
 {
     position: absolute;
@@ -181,5 +198,5 @@ hr
 {
     font-size: 40px;
     cursor: pointer;
-    color: orange;
+    color: white;
 }
