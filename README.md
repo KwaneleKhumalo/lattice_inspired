@@ -16,6 +16,10 @@
 6 - Charts JS (for charts)
 
 
+Folder Structure -----
+
+
+
 ** Contributors: 
 
 1 - Kwanele Khumalo (Author);
