@@ -135,8 +135,4 @@ function closeForm() {
 }
 
 
-
-// get List Items
-
-
 getListItems();
