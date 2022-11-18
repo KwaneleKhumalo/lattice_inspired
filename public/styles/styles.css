@@ -1,19 +1,10 @@
 /* 
- - #34495e - Dark Blue
- - #2c3e50 - Darker
- - #95a5a6 - Concrete Gray
- - #7f8c8d darker gray
-
- New Colors 
+New Colors 
 
  #234345 - Emerald Forest (side-nav, pending-task, search-icon)
  #326063 - Under the Sea (header)
  
-
 */
-
-
-
 
 * 
 {
@@ -25,9 +16,9 @@
 
 body
 {
-    position: relative;
     /* Needed for responsiveness */
     display:flex; 
+    flex-direction: row-reverse;
 }
 /*----------------------------------------------------------- section -------------------------- */
 section
@@ -36,9 +27,6 @@ section
     display: flex;
     flex-direction: column;
     height: 100vh;
-    position: absolute;
-    left: 0;
-    right: 0;
     width: 100%;
 }
 
@@ -49,11 +37,9 @@ header
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 0px 4rem;
+    padding: 0px;
     height: 100vh;
-    position: absolute;
-    right: 0;
-    width: 95%;
+    width: 100%;
     background-color: #326063;
 }
 
@@ -63,7 +49,7 @@ header
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 1rem 2rem;
 }
 
 .today
@@ -95,7 +81,7 @@ header
 .header-body
 {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     flex-direction: column;
     align-items: center;
     height: 60%;
@@ -126,7 +112,7 @@ header
 .search-icon
 {
     position: absolute;
-    left: 62.5%;
+    /* left: 62.5%; */
     top: 10%;
     font-size: 2rem;
     cursor: pointer;
@@ -136,7 +122,7 @@ header
 .pending-tasks
 {
     background-color: #234345;
-    padding: 10px;
+    padding: 20px;
     color: white;
     width: 30%;
     border-radius: 20px;
@@ -147,8 +133,6 @@ header
 /*----------------------------------------------------------- Side Nav-------------------------- */
 .side-nav
 {
-    position: absolute;
-    top: 0;
     display: flex;
     padding: 20px;
     gap: 20px;
@@ -198,72 +182,112 @@ hr
 
 /*----------------------------------Media Queries-------------------------- */
 
+/* Devices 768px and up */
+@media (min-width: 768px)
+{   
+    .date 
+    {
+        padding-right: 50px;
+    }
+
+    header 
+    {
+        gap: 1em;
+    }
+
+    .search-icon 
+    {
+        left: 71%;
+    }
+
+    .search > input 
+    {
+        width: 50%;
+    }
+
+    .pending-tasks 
+    {
+        width: 75%;
+    }
+
+    .side-nav 
+    {
+        width: auto;
+        padding: 0px;
+    }
+}
+
+/* Devices 1200px and up */
+@media  (min-width: 1200px)
+{
+    .search-icon 
+    {
+        left: 72.5%;
+    }
+}
+
 /* Devices less than 768px */
 @media (max-width: 767.98px)
 {
-    .header-nav {
+    .header-nav 
+    {
         flex-direction: column;
-        padding: 15px;
-        gap: 10px
+        padding: 1rem;
+        gap: 1.5rem;
     }
 
-    .welcome {
+    .welcome 
+    {
         display: none;
     }
 
-    header {
+    header 
+    {
         gap: 1em;
-        /* height: 25vh; */
     }
-    .header-body {
-        gap: 5em
-    }
-
-    .search-icon {
-        left: 85%;
+    
+    .search-icon 
+    {
+        left: 68%;
     }
 
-    .search > input,
-    .pending-tasks {
-        width: 90%;
+    .search > input 
+    {
+        width: 50%;
     }
 
-    .side-nav {
+    .pending-tasks 
+    {
+        width: 75%;
+    }
+
+    .side-nav 
+    {
         width: auto;
         padding: 5px;
     }
 
-    .side-nav a {
+    .side-nav a 
+    {
         padding: 15px 10px;
     }
 
-    span {
+    span 
+    {
         display: none;
     }
 }
-/* Devices 768px and up */
-@media (min-width: 768px)
+
+/* Devices less than 480px */
+@media (max-width: 480px) 
 {
-    header {
-        gap: 1em;
-        /* height: 25vh; */
+    .search-icon 
+    {
+        left: 70%;
     }
 
-    .header-body {
-        gap: 6em;
-    }
-
-    .search-icon {
-        left: 60%;
-    }
-
-    /* .search > input, */
-    .pending-tasks {
-        width: 75%;
-    }
-
-    .side-nav {
-        width: auto;
-        padding: 0px;
+    .search > input 
+    {
+        width: 65%;
     }
 }
