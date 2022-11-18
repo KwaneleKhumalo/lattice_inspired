@@ -1,17 +1,17 @@
-const currentDate = new Date();
-let date = currentDate;
-let month = date.getMonth();
-let today = date.getDay();
-let currentYear = date.getFullYear();
-let todayDate = date.getDate();
-let dateOutput = document.querySelector('.today')
-
-
+// Variables
 
 // Functions
 
-// Function to spit out full date. 
-function getFullDate() {
+// Date. 
+const getFullDate = () => {
+    const currentDate = new Date();
+    let date = currentDate;
+    let month = date.getMonth();
+    let today = date.getDay();
+    let currentYear = date.getFullYear();
+    let todayDate = date.getDate();
+    let dateOutput = document.querySelector('.today')
+
     switch(month) {
         case 0:
         month = 'January';
@@ -93,6 +93,13 @@ function getFullDate() {
     }
 
     dateOutput.innerText = `${month},  ${todayDate} ${currentYear}`;
+};
+
+const dailyItems = () => {
+    const {url} = 'http://localhost:3000/todo-items';
+    const getDailyItems = axios(url);
+    console.log(getDailyItems);
 }
+
 
 getFullDate();
