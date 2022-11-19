@@ -18,7 +18,8 @@ body
 {
     /* Needed for responsiveness */
     display:flex; 
-    flex-direction: row-reverse;
+    flex-direction: row;
+    position: relative;
 }
 /*----------------------------------------------- section------------------------- */
 section
@@ -39,8 +40,9 @@ header
     gap: 3rem;
     padding: 0px 4rem;
     height: 100vh;
-    position: absolute;
+    position: relative;
     right: 0;
+    left: 1;
     width: 95%;
     padding: 0px;
     height: 100vh;
@@ -51,8 +53,10 @@ header
 .header-nav
 {
     display: flex;
+    position: absolute;
     flex-direction: row-reverse;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
     padding: 1rem 2rem;
 }
@@ -60,6 +64,17 @@ header
 .today
 {
     color: white;
+}
+
+.logo
+{
+    display: flex;
+    gap: 5rem;
+}
+
+.notifications
+{
+    cursor: pointer;
 }
 
 .header-logo
@@ -87,6 +102,7 @@ header
 {
     display: flex;
     gap: 3rem;
+    margin-top: 10rem;
     flex-direction: column;
     align-items: center;
     height: 60%;
@@ -117,8 +133,8 @@ header
 .search-icon
 {
     position: absolute;
-    /* left: 62.5%; */
     top: 10%;
+    right: 50%;
     font-size: 2rem;
     cursor: pointer;
     color: #234345;
@@ -126,17 +142,25 @@ header
 
 .pending-tasks
 {
-    background-color: #0000006a;
     display: flex;
     text-align: center;
     flex-direction: column;
     gap: 20px;
+    width: 30%;
     background-color: #234345;
     padding: 20px;
     color: white;
-    width: 30%;
     border-radius: 20px;
-    height: 100%;
+}
+
+.pending-tasks > p
+{
+    font-size: 20px;
+    text-decoration: underline;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
 }
 
 .pending-task-items
@@ -144,8 +168,7 @@ header
     list-style: none;
     text-align: center;
     display: flex;
-    justify-content: space-between;
-    gap: 5rem;
+    justify-content: space-around;
 }
 
 .list-divider
@@ -167,7 +190,6 @@ header
     width: 5%;
     height: 100vh;
     background-color: #234345;
-    /* background-color: rgb(3, 3, 71); */
 }
 
 .top-nav-items > .divider
@@ -196,6 +218,7 @@ hr
     padding: 20px;
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 
 .profile-img
@@ -205,12 +228,10 @@ hr
     color: white;
 }
 
-
-
 /*----------------------------------Media Queries-------------------------- */
 
 /* Devices 768px and up */
-@media (min-width: 768px)
+@media screen and (max-width: 768px)
 {   
     .date 
     {
@@ -245,11 +266,11 @@ hr
 }
 
 /* Devices 1200px and up */
-@media  (min-width: 1200px)
+@media (min-width: 750px) and (max-width:2000px )
 {
     .search-icon 
     {
-        left: 72.5%;
+        left: 62.5%;
     }
 }
 
