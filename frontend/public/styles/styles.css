@@ -20,7 +20,7 @@ body
     display:flex; 
     flex-direction: row-reverse;
 }
-/*----------------------------------------------------------- section -------------------------- */
+/*----------------------------------------------- section------------------------- */
 section
 {
     height: 100vh;
@@ -30,16 +30,24 @@ section
     width: 100%;
 }
 
-/*----------------------------------------------------------- Header -------------------------- */
+/*------------------------------------------------- Header -------------------------- */
 
 header
 {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+<<<<<<< HEAD
+    padding: 0px 4rem;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    width: 95%;
+=======
     padding: 0px;
     height: 100vh;
     width: 100%;
+>>>>>>> draft/draft
     background-color: #326063;
 }
 
@@ -121,16 +129,37 @@ header
 
 .pending-tasks
 {
+<<<<<<< HEAD
+    background-color: #0000006a;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+=======
     background-color: #234345;
+>>>>>>> draft/draft
     padding: 20px;
     color: white;
     width: 30%;
     border-radius: 20px;
-    height: 100%;
+}
+
+.pending-task-items
+{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.list-divider
+{
+    border: 1px solid rgba(211, 211, 211, 0.25);
 }
 
 
-/*----------------------------------------------------------- Side Nav-------------------------- */
+/*--------------------------------------------- Side Nav-------------------------- */
 .side-nav
 {
     display: flex;
@@ -178,6 +207,9 @@ hr
     font-size: 40px;
     cursor: pointer;
     color: white;
+<<<<<<< HEAD
+}
+=======
 }
 
 /*----------------------------------Media Queries-------------------------- */
@@ -291,3 +323,4 @@ hr
         width: 65%;
     }
 }
+>>>>>>> draft/draft

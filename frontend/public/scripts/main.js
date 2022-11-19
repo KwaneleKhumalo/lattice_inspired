@@ -95,11 +95,40 @@ const getFullDate = () => {
     dateOutput.innerText = `${month},  ${todayDate} ${currentYear}`;
 };
 
-const dailyItems = () => {
-    const {url} = 'http://localhost:3000/todo-items';
-    const getDailyItems = axios(url);
-    console.log(getDailyItems);
+const dailyItems = async () => {
+    const url = 'http://localhost:3000/todo-items';
+    const getDailyItems = await axios(url);
+    let data = getDailyItems.data
+    console.log(data);
+    data.map((dailyItem) => {
+
+        let options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+
+        let todoTitle = dailyItem.todoTitle;
+        today = new Date();
+        let itemDueDate = new Date(dailyItem.dueDate);
+        itemDueDate.setDate(itemDueDate.getDate()+1);
+        
+        let ul = document.querySelector('.pending-tasks');
+        let li = document.createElement('li');
+        let liDate = document.createElement('p');
+        let underline = document.createElement('hr');
+
+
+        liDate.innerText = itemDueDate.toDateString("eng-US", options);
+        li.classList.add('pending-task-items');
+        underline.classList.add('list-divider');
+        li.innerText = todoTitle;
+        li.append(liDate);
+        ul.appendChild(li);
+        ul.append(underline);
+
+        if(itemDueDate.getDate() <= today.getDate())
+        {
+            liDate.style.color = 'red';
+        }
+    });
 }
 
-
+dailyItems();
 getFullDate();
