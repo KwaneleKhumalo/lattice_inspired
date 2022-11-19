@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="./styles/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <script defer type="text/javascript" src="js/materialize.min.js"></script>
     <script defer src="./scripts/main.js"></script>
     <title>RIZE | Feel Overpowered!</title>
@@ -42,28 +50,29 @@
     </section>
 
     <!-- sidenav -->
+    <!-- spans added to hide label on small screens -->
     <div class="side-nav z-depth-3">
-        <div class="top-nav-items">
-            <a href="/"> <i class="material-icons">dashboard</i>Dashboard</a>
-            <a href=""> <i class="material-icons">person</i>Profile</a>
-            <div class="divider">
-                <hr>
-            </div>
-            <a href="/todo-items"> <i class="material-icons">list</i>Daily Items</a>
-            <a href="/goals"> <i class="material-icons">track_changes</i>Goals</a>
+      <div class="top-nav-items">
+        <a href="/">
+          <i class="material-icons">dashboard</i>
+          <span>Dashboard</span>
+        </a>
+        <a href="">
+          <i class="material-icons">person</i>
+          <span>Profile</span>
+        </a>
+        <div class="divider">
+          <hr />
         </div>
         <a href="/todo-items">
           <i class="material-icons">list</i>
-          <!-- span added to hide label on small screens -->
           <span>Daily Items</span>
         </a>
         <a href="/goals">
           <i class="material-icons">track_changes</i>
-          <!-- span added to hide label on small screens -->
-          <span>Goals</span>
-        </a>
+          <span>Goals</span></a
+        >
       </div>
-
       <div class="bottom-nav-items">
         <a class="profile-img">
           <i class="material-icons profile-img">account_circle</i>
