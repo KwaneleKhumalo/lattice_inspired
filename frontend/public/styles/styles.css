@@ -37,17 +37,14 @@ header
     display: flex;
     flex-direction: column;
     gap: 3rem;
-<<<<<<< HEAD
     padding: 0px 4rem;
     height: 100vh;
     position: absolute;
     right: 0;
     width: 95%;
-=======
     padding: 0px;
     height: 100vh;
     width: 100%;
->>>>>>> draft/draft
     background-color: #326063;
 }
 
@@ -129,15 +126,12 @@ header
 
 .pending-tasks
 {
-<<<<<<< HEAD
     background-color: #0000006a;
     display: flex;
     text-align: center;
     flex-direction: column;
     gap: 20px;
-=======
     background-color: #234345;
->>>>>>> draft/draft
     padding: 20px;
     color: white;
     width: 30%;
@@ -209,9 +203,6 @@ hr
     font-size: 40px;
     cursor: pointer;
     color: white;
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -327,4 +318,3 @@ hr
         width: 65%;
     }
 }
->>>>>>> draft/draft
