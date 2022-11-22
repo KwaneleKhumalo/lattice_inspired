@@ -1,0 +1,198 @@
+/* 
+ New Colors 
+
+ #234345 - Emerald Forest (side-nav, pending-task, search-icon)
+ #326063 - Under the Sea (header)
+ 
+*/
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body
+{
+    /* Needed for responsiveness */
+    display:flex; 
+    flex-direction: row;
+}
+
+/*----------------------------------------------------------- Side Nav-------------------------- */
+.side-nav
+{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 5%;
+    height: 100vh;
+    background-color: #234345;
+    /* background-color: rgb(3, 3, 71); */
+}
+
+.top-nav-items > .divider
+{
+    width: 70%;
+    margin: auto;
+}
+
+.divider
+{
+    width: 100%;
+}
+
+hr
+{
+    border: 1px solid rgba(162, 161, 161, 0.537);
+}
+
+.side-nav a
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+
+.profile-img
+{
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+a.logo {
+    padding-bottom: 4em;
+}
+
+.logo-icon
+{
+    font-size: 35px;
+}
+
+
+.logo > p
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-transform: uppercase;
+
+}
+/*----------------------------------------------------------- section -------------------------- */
+
+section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    gap: 20px;
+    background-color: #326063;
+    height: 100vh;
+    width: 100%;
+    padding: 30px;
+}
+
+.profile
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    color: white;
+    width: 250px;
+    height: 250px;
+    
+}
+
+
+.profile-page-img 
+{
+    width: 125px;
+    padding-bottom: 20px;
+    border-radius: 50%;
+}
+.profile > h1 
+{
+    font-size: 1.75em;
+}
+
+.profile > p 
+{
+    font-size: 1.75em;
+}
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 250px;
+    height: 250px ;
+    background-color: #234345;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 15%;
+    
+}
+.card > h2
+{
+    font-size: 1.75em;
+}
+.card > p 
+{
+    font-size: 1.75em;
+}
+
+
+
+/*----------------------------------Media Queries-------------------------- */
+
+
+/* Devices 768px and up */
+@media (min-width: 768px)
+{   
+    .side-nav {
+        width: auto;
+        padding: 0px;
+    }
+}
+
+/* Devices less than 768px */
+@media (max-width: 767.98px)
+{
+ .side-nav {
+        width: auto;
+        padding: 5px;
+    }
+
+    .side-nav a {
+        padding: 15px 10px;
+    }
+
+    .side-nav span {
+        display: none;
+    }
+
+}
+
+
