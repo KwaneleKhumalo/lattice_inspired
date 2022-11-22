@@ -19,8 +19,12 @@ body
     /* Needed for responsiveness */
     display:flex; 
     flex-direction: row;
+    max-width: 100vw;
     position: relative;
+    overflow: hidden;
 }
+
+
 /*----------------------------------------------- section------------------------- */
 section
 {
@@ -218,7 +222,7 @@ hr
     padding: 20px;
     text-align: center;
     color: white;
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .profile-img
@@ -231,11 +235,41 @@ hr
 /*----------------------------------Media Queries-------------------------- */
 
 /* Devices 768px and up */
-@media screen and (max-width: 768px)
-{   
-    .date 
+@media screen and (max-width: 767px)
+{ 
+    
+    .search-icon 
     {
-        padding-right: 50px;
+        left: 62.5%;
+    }
+
+    .header-nav
+    {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .logo
+    {
+        gap: 1rem;
+
+    }
+
+    .header-logo
+    {
+        font-size: 30px;
+    }
+
+    .date
+    {
+        text-align: center;
+    }
+
+    .welcome
+    {
+        display: none;
     }
 
     header 
@@ -255,7 +289,12 @@ hr
 
     .pending-tasks 
     {
-        width: 75%;
+        width: 100%;
+    }
+
+    .pending-tasks > p
+    {
+        width: 100%;
     }
 
     .side-nav 
@@ -263,72 +302,80 @@ hr
         width: auto;
         padding: 0px;
     }
-}
-
-/* Devices 1200px and up */
-@media (min-width: 750px) and (max-width:2000px )
-{
-    .search-icon 
+    a > span
     {
-        left: 62.5%;
+        display: none;
     }
 }
 
-/* Devices less than 768px */
-@media (max-width: 767.98px)
+/* Tablets and Ipads*/
+@media (min-width: 768px) and (max-width:912px )
 {
-    .header-nav 
+    .side-nav
     {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1.5rem;
+        width: auto;
     }
 
-    .welcome 
+    .welcome
     {
         display: none;
     }
 
-    header 
+    .pending-tasks
     {
-        gap: 1em;
-    }
-    
-    .search-icon 
-    {
-        left: 68%;
+        width: 80%;
     }
 
-    .search > input 
+    .search > input
     {
         width: 50%;
     }
 
-    .pending-tasks 
-    {
-        width: 75%;
-    }
 
-    .side-nav 
-    {
-        width: auto;
-        padding: 5px;
-    }
 
-    .side-nav a 
+    .search-icon 
     {
-        padding: 15px 10px;
-    }
-
-    span 
-    {
-        display: none;
+        left: 69.5%;
     }
 }
 
-/* Devices less than 480px */
-@media (max-width: 480px) 
+/* Devices less than 280px */
+@media (max-width: 280px) 
 {
+    section
+    {
+        height: auto;
+    }
+
+    .header-body
+    {
+        margin-top: 5rem;
+    }
+    .side-nav
+    {
+        width: 10%;
+        padding: 0px 10px;
+        position: absolute;
+    }
+
+    .top-nav-items > .divider
+    {
+        width: 30%;
+    }
+
+    .pending-tasks
+    {
+        width: 90%;
+    }
+
+    header
+    {
+        background-color: red;
+        height: auto;
+        left: 5%;
+        padding-bottom: 3rem;
+        position: absolute;
+    }
     .search-icon 
     {
         left: 70%;
@@ -338,4 +385,18 @@ hr
     {
         width: 65%;
     }
+
+    .profile-img
+    {
+        font-size: 24px;
+    }
 }
+
+@media screen and (max-width: 3000px) 
+{
+    .search-icon 
+    {
+        left: 62.5%;
+    }
+}
+

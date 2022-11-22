@@ -23,3 +23,4 @@ Folder Structure -----
 ** Contributors: 
 
 1 - Kwanele Khumalo (Author);
+2 - Amy Funderburg
