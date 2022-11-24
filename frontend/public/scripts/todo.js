@@ -25,7 +25,7 @@ submitBtn.addEventListener('submit', async (event)=> {
     let todoDesc = document.getElementById('todo-desc').value;
     let dueDate = document.getElementById('todo-date').value;
 
-    // Input Validation
+    // Post
     if(todoTitle === '' || todoDesc === '' || dueDate === '')
         {
             alert('All Fields are required!');
@@ -48,59 +48,97 @@ submitBtn.addEventListener('submit', async (event)=> {
     todoDesc.value = '';
     dueDate.value = '';
         }
-})
+});
 
 // List items
 const getListItems = () => {
+            
     // Fetch the data from the backend
     fetch('http://localhost:3000/todo-items').then((res) => res.json()).then((data) => {
 
-        if(data.length < 1)
+        //Data is object with an Array FindDailyItem.
+        let allItems = data.findDailyItem;
+        console.log(allItems);
+
+        if(allItems.length < 1)
         {
             totalListItems.innerText = 'You have no Tasks'; // of list items.
-        } else if(data.length === 1)
+        } else if(allItems.length === 1)
         {
-            totalListItems.innerText = `${data.length} TASK`;
-        } else if(data.length > 1)
+            totalListItems.innerText = `${allItems.length} TASK`;
+        } else if(allItems.length > 1)
         {
-            totalListItems.innerText = `${data.length} TASKS`;
+            totalListItems.innerText = `${allItems.length} TASKS`;
         }
         
-        data.map((todoList) => {
+        allItems.map((todoList) => {
 
 // Declare output variables
+            
+            let deleteForm = document.createElement('form');
+            let editForm = document.createElement('form');
+
+            let deleteBtn = document.createElement('button');
+            let deleteIcon = document.createElement('i');
+
+            let editBtn = document.createElement('button');
+            let editIcon = document.createElement('i');
+
             let divider = document.createElement('hr');
-            let tableItemsContainer = document.createElement('div')
+            let tableItemsContainer = document.createElement('div');
+            let action = document.createElement('div');
             let tableItemsTitle = document.createElement('div');
             let tableItemsInfo = document.createElement('div');
-
             let todoTitle = document.createElement('strong');
             let todoDesc = document.createElement('strong');
+
             let dueDate = document.createElement('strong');
             let dateCreated = document.createElement('strong');
 
 // Add Classes to the arrays
+            // Buttons
+            deleteBtn.setAttribute('submit', 'delete');
+            deleteBtn.classList.add('delete-btn');
+            deleteIcon.classList.add('material-icons');
+            deleteIcon.innerText = 'delete';
+
+            editBtn.setAttribute('submit', 'edit');
+            editBtn.classList.add('edit-btn');
+            editIcon.classList.add('material-icons');
+            editIcon.innerText = 'edit';
+
+            // Items
             divider.classList.add('container-divider');
+            action.classList.add('action');
             tableItemsContainer.classList.add('table-items');
             tableItemsTitle.classList.add('table-items-title');
             tableItemsInfo.classList.add('table-items-info')
-             todoTitle.classList.add('todo-title');
-             todoDesc.classList.add('todo-desc');
-             dueDate.classList.add('due-date');
+            todoTitle.classList.add('todo-title');
+            todoDesc.classList.add('todo-desc');
+            dueDate.classList.add('due-date');
             
 // Append Elements to the container
+            deleteBtn.append(deleteIcon)
+            deleteForm.appendChild(deleteBtn);
 
+            editBtn.append(editIcon)
+            editForm.appendChild(editBtn);
+
+            action.appendChild(deleteForm);
+            action.appendChild(editForm);
             tableItemsTitle.appendChild(todoTitle);
             tableItemsTitle.appendChild(todoDesc);
-
             tableItemsInfo.appendChild(dateCreated);
             tableItemsInfo.appendChild(dueDate);
 
-
+            tableItemsContainer.appendChild(action);
             tableItemsContainer.appendChild(tableItemsTitle);
             tableItemsContainer.appendChild(tableItemsInfo);
             tableContainer.appendChild(tableItemsContainer);
             tableContainer.appendChild(divider);
+            
+
+            // deleteBtn.appendChild(deleteIcon);
 
     //Iteration   
             todoTitle.innerText = todoList.todoTitle;
@@ -113,6 +151,7 @@ const getListItems = () => {
 
     });
 };
+
 
 // Form Modal
 function toggleForm() {

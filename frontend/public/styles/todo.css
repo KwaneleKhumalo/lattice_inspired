@@ -255,7 +255,7 @@ input:focus
 
 .todo-table
 {
-    padding: 10px;
+    padding: 10px 40px;
 }
 .todo-table-header
 {
@@ -269,7 +269,7 @@ input:focus
 .todo-table-header-title
 {
     display: flex;
-    gap: 5rem;
+    gap: 7rem;
     padding-left: 10px;
     width: 50%;
 }
@@ -297,6 +297,7 @@ input:focus
 {
     display: flex;
     flex-direction: column;
+    padding: 20px;
     gap: 2rem;
 }
 
@@ -304,7 +305,39 @@ input:focus
 .table-items
 {
     display: flex;
-    justify-content: space-between;
+    gap: 5rem;
+    height: 8vh;
+    align-items: center;
+    transition: 0.8s;
+}
+
+.action
+{
+    display: flex;
+    justify-content: space-around;
+    width: 5%;
+}
+
+.edit-btn
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+}
+
+.table-items:hover
+{
+    background-color: #0f1c1d14;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .table-items-title
@@ -319,9 +352,10 @@ input:focus
 .table-items-info
 {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    width: 15%;
+    padding: 20px;
+    justify-content: flex-end;
+    gap: 5rem;
+    width: 40%;
 }
 
 .todo-title, .title

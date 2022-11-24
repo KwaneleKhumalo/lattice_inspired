@@ -98,8 +98,7 @@ const getFullDate = () => {
 const dailyItems = async () => {
     const url = 'http://localhost:3000/todo-items';
     const getDailyItems = await axios(url);
-    let data = getDailyItems.data
-    console.log(data);
+    let data = getDailyItems.data.findDailyItem
     data.map((dailyItem) => {
 
         let options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
