@@ -127,30 +127,34 @@ button
         --primary-text: #234345;
     }
 }
-/* Devices 768px and up */
-@media (min-width: 768px)
+/* Devices less than 1200px  */
+@media (max-width: 1199.98px)
 {   
-    .side-nav {
-        width: auto;
-        padding: 0px;
-    }
+    input {
+        width: 50%;
+     }
+}
+
+@media (max-width: 991.98px)
+{
+ input {
+    width: 60%;
+ }
+ button {
+    width: 50%;
+ }
+
 }
 
 /* Devices less than 768px */
 @media (max-width: 767.98px)
 {
- .side-nav {
-        width: auto;
-        padding: 5px;
-    }
-
-    .side-nav a {
-        padding: 15px 10px;
-    }
-
-    .side-nav span {
-        display: none;
-    }
+ input {
+    width: 70%;
+ }
+ button {
+    width: 50%;
+ }
 
 }
 
