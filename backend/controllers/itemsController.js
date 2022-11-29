@@ -38,15 +38,17 @@ const getSingleDailyItem = (async (req, res) => {
 // Update Item
 const updateDailyItem = (async (req, res) => {
     const {id:itemID} = req.params;
-    const editItem = await dailyItem.findByIdAndUpdate({_id:itemID});
+    const editItem = await dailyItem.findByIdAndUpdate({_id:itemID}, req.body, {new: true});
+
     res.status(200).json({editItem});
-})
+});
+
 // Delete Item
 const removeDailyItem = (async (req, res) => {
     const {id:itemID} = req.params;
-    const deleteItem = await dailyItem.findByIdAndDelete({_id:itemID});
-    res.status(200).json({deleteItem})
-})
+    await dailyItem.findByIdAndDelete({_id:itemID});
+    res.status(200).json({msg: 'item has deleted'});
+});
 
 module.exports = {
     newItem,
