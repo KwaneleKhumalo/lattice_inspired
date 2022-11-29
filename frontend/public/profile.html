@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./scripts/main.js"></script>
+    <title>RIZE | Feel Overpowered!</title>
+  </head>
+  <body>
+    <!-- sidenav -->
+
+    <div class="side-nav">
+      <div class="top-nav-items">
+        <div>
+          <a class="logo">
+            <p>
+              <i class="material-icons logo-icon">blur_circular</i
+              ><span>rize</span>
+            </p>
+          </a>
+        </div>
+        <a href="index.html">
+          <i class="material-icons">dashboard</i>
+          <span>Dashboard</span>
+        </a>
+        <a href="">
+          <i class="material-icons">person</i>
+          <span>Profile</span>
+        </a>
+        <div class="divider">
+          <hr />
+        </div>
+        <a href="todo.html">
+          <i class="material-icons">list</i>
+          <span>Daily Items</span>
+        </a>
+        <a href="goals.html">
+          <i class="material-icons">track_changes</i>
+          <span>Goals</span></a
+        >
+      </div>
+      <div class="bottom-nav-items">
+        <a class="profile-img">
+          <i class="material-icons profile-img">account_circle</i>
+        </a>
+      </div>
+    </div>
+
+    <section>
+      <div class="profile">
+        <img
+          class="profile-page-img"
+          src="images/default-profile-image.png"
+          alt="profile-img"
+        />
+        <h1>Hello,&nbsp; <span class="user-name"> Amy</span></h1>
+        <div class="date">
+          <p>Today is <span class="today">November 21 2022</span></p>
+        </div>
+      </div>
+      <a href="#" class="card">
+        <h2>Notifications</h2>
+        <p class="notification-count">15</p>
+      </a>
+      <a href="todo.html" class="card">
+        <h2>Pending Tasks</h2>
+        <p class="pending-task-count">10</p>
+      </a>
+      <a href="goals.html" class="card">
+        <h2>Goals</h2>
+        <p class="goals-count">5</p>
+      </a>
+    </section>
+    <!-- placeholder profile icon by https://dryicons.com -->
+  </body>
+</html>
