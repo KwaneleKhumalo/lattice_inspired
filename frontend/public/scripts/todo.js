@@ -8,6 +8,8 @@ let deleteForm = '';
 let date = new Date();
 let today = date.toLocaleDateString();
 
+
+
 // Input validation
 let todoInput = document.querySelectorAll('.todo-input');
 let submitBtn = document.getElementById('todo-submit');
@@ -30,6 +32,7 @@ submitBtn.addEventListener('submit', async (event) => {
     if(todoTitle === '' || todoDesc === '' || dueDate === '')
         {
             alert('All Fields are required!');
+            return false;
 
         } else {
 
@@ -38,6 +41,7 @@ submitBtn.addEventListener('submit', async (event) => {
         try {
             const response = await axios.post (url, validTodoItems)
                 if (response) {
+                    
                     window.location.replace('http://127.0.0.1:5555/frontend/public/todo.html');
                     console.log(response);
                 } 
@@ -60,104 +64,16 @@ const getListItems = () => {
         let allItems = data.findDailyItem;
         createTodo(allItems);
 
-        
-        
-
-        // if(allItems.length < 1)
-        // {
-        //     totalListItems.innerText = 'You have no Tasks'; // of list items.
-        // } else if(allItems.length === 1)
-        // {
-        //     totalListItems.innerText = `${allItems.length} TASK`;
-        // } else if(allItems.length > 1)
-        // {
-        //     totalListItems.innerText = `${allItems.length} TASKS`;
-        // }
-
-
-
-
-
-
-
-
-        
-//         allItems.map((todoList) => {
-
-// //         const allElements = () => {
-
-// //             deleteForm = document.createElement('form');
-// //             let editForm = document.createElement('form');
-
-// //             let deleteBtn = document.createElement('button');
-// //             let deleteIcon = document.createElement('i');
-
-// //             let editBtn = document.createElement('button');
-// //             let editIcon = document.createElement('a');
-// //             // editIcon.setAttribute('');
-
-// //             let divider = document.createElement('hr');
-// //             let tableItemsContainer = document.createElement('div');
-// //             let action = document.createElement('div');
-// //             let tableItemsTitle = document.createElement('div');
-// //             let tableItemsInfo = document.createElement('div');
-// //             let todoTitle = document.createElement('strong');
-// //             let todoDesc = document.createElement('strong');
-
-// //             let dueDate = document.createElement('strong');
-// //             let dateCreated = document.createElement('strong');
-
-// // // Add Classes to the arrays
-// //             // Buttons
-// //             deleteBtn.setAttribute('submit', 'delete');
-// //             deleteBtn.classList.add('delete-btn');
-// //             deleteIcon.classList.add('material-icons');
-// //             deleteIcon.innerText = 'delete';
-
-// //             editBtn.setAttribute('submit', 'edit');
-// //             editBtn.classList.add('edit-btn');
-// //             editIcon.classList.add('material-icons');
-// //             editIcon.innerText = 'edit';
-
-// //             // Items
-// //             divider.classList.add('container-divider');
-// //             action.classList.add('action');
-// //             tableItemsContainer.classList.add('table-items');
-// //             tableItemsTitle.classList.add('table-items-title');
-// //             tableItemsInfo.classList.add('table-items-info')
-// //             todoTitle.classList.add('todo-title');
-// //             todoDesc.classList.add('todo-desc');
-// //             dueDate.classList.add('due-date');
-            
-// // // Append Elements to the container
-// //             deleteBtn.append(deleteIcon)
-// //             deleteForm.appendChild(deleteBtn);
-
-// //             editBtn.append(editIcon)
-// //             editForm.appendChild(editBtn);
-
-// //             action.appendChild(deleteForm);
-// //             action.appendChild(editForm);
-// //             tableItemsTitle.appendChild(todoTitle);
-// //             tableItemsTitle.appendChild(todoDesc);
-// //             tableItemsInfo.appendChild(dateCreated);
-// //             tableItemsInfo.appendChild(dueDate);
-
-// //             tableItemsContainer.appendChild(action);
-// //             tableItemsContainer.appendChild(tableItemsTitle);
-// //             tableItemsContainer.appendChild(tableItemsInfo);
-// //             tableContainer.appendChild(tableItemsContainer);
-// //             tableContainer.appendChild(divider);
-
-// //     //Iteration   
-// //             todoTitle.innerText = todoList.todoTitle;
-// //             todoDesc.innerText = todoList.todoDesc;
-// //             dueDate.innerText = todoList.dueDate;
-// //             dateCreated.innerText = today;
-// //             };
-
-//         allElements();
-//         });
+        if(allItems.length < 1)
+        {
+            totalListItems.innerText = ` You currently have ${allItems.length} TASKS`; 
+        } else if(allItems.length === 1)
+        {
+            totalListItems.innerText = `${allItems.length} TASK`;
+        } else if(allItems.length > 1)
+        {
+            totalListItems.innerText = `${allItems.length} TASKS`;
+        }
 
     });
 };
@@ -183,21 +99,22 @@ const createTodo = (data) => {
         <div class="table-items">
             <div class="table-items-title">
                 <div class="action">
-                    <a href="edit.html?id=${ item._id }" >Edit</a>
-                    <button onclick="removeItem('${item._id}')">Delete</button>
+                    <a class ='edit-btn'href="edit.html?id=${ item._id }" >
+                        <i class="edit-btn material-icons">create</i>
+                    </a>
+                    <button waves-effect waves-teal onclick="removeItem('${item._id}')"> <i class="material-icons">delete_forever</i></button>
                 </div>
                 <p>${ item.todoTitle }</p>
                 <p>${ item.todoDesc }</p>
             </div>
-
             <div class="table-items-info">
                 <p>${ today }</p>
                 <p>${ item.dueDate } </p>
             </div>
         </div>
-        `
-        
+        <hr class="container-divider">
 
+        `
     });
 }
 
@@ -207,8 +124,9 @@ const removeItem = (id) => {
     })
     .then(res => res.json())
     .then(res => console.log(res));
-    location.reload();
+    window.location.replace('http://127.0.0.1:5555/frontend/public/todo.html');
 }
+
 // Form Modal
 function toggleForm() {
     if(addTodoBtn)

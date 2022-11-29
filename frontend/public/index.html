@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="./scripts/main.js"></script>
@@ -20,21 +25,10 @@
           <i class="material-icons">dashboard</i>
           <span>Dashboard</span>
         </a>
-        <a href="">
-          <i class="material-icons">person</i>
-          <span>Profile</span>
-        </a>
-        <div class="divider">
-          <hr />
-        </div>
         <a href="todo.html">
           <i class="material-icons">list</i>
           <span>Daily Items</span>
         </a>
-        <a href="goals.html">
-          <i class="material-icons">track_changes</i>
-          <span>Goals</span></a
-        >
       </div>
       <div class="bottom-nav-items">
         <a class="profile-img">
@@ -48,22 +42,14 @@
         <div class="header-nav">
           <div class="logo">
             <p><i class="material-icons header-logo">blur_circular</i>rize</p>
-            <p><i class="material-icons notifications">notifications_none</i></p>
           </div>
           <div class="date">
             <strong class="today">November 07 2022</strong>
           </div>
-          <div class="welcome">
-            <strong>Welcome back!</strong>
-          </div>
         </div>
         <div class="header-body">
-          <div class="search">
-            <input type="text" name="" id="" placeholder="search..." />
-            <i class="material-icons search-icon">search</i>
-          </div>
-          <div class="pending-tasks">
-            <p>Your Pending Goal Items:</p>
+          <div class="pending-tasks z-depth-5">
+            <p class="pending-task-header">Pending Items:</p>
           </div>
         </div>
       </header>

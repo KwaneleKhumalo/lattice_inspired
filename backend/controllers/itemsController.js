@@ -39,8 +39,9 @@ const getSingleDailyItem = (async (req, res) => {
 const updateDailyItem = (async (req, res) => {
     const {id:itemID} = req.params;
     const editItem = await dailyItem.findByIdAndUpdate({_id:itemID}, req.body, {new: true});
-
     res.status(200).json({editItem});
+    console.log(editItem);
+
 });
 
 // Delete Item

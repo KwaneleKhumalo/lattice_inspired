@@ -99,6 +99,7 @@ const dailyItems = async () => {
     const url = 'http://localhost:3000/todo-items';
     const getDailyItems = await axios(url);
     let data = getDailyItems.data.findDailyItem
+
     data.map((dailyItem) => {
 
         let options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
@@ -107,6 +108,7 @@ const dailyItems = async () => {
         today = new Date();
         let itemDueDate = new Date(dailyItem.dueDate);
         itemDueDate.setDate(itemDueDate.getDate()+1);
+        
         
         let ul = document.querySelector('.pending-tasks');
         let li = document.createElement('li');
@@ -126,8 +128,11 @@ const dailyItems = async () => {
         {
             liDate.style.color = 'red';
         }
+
+        
     });
 }
+
 
 dailyItems();
 getFullDate();

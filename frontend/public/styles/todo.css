@@ -90,7 +90,7 @@ section
 
 /*------------------------------------------- Tasks Body---------------------- */
 
-.container, .table-container
+.main-container, .table-container
 {
     display: flex;
     flex-direction: column;
@@ -129,7 +129,7 @@ section
    display: flex;
    align-items: center;
    justify-content: center;
-   background-color: #0c1722d8;
+   background-color: #0c1722e9;
    height: 100%;
    overflow: hidden;
    transform: translateY(-100%);
@@ -150,14 +150,22 @@ section
     gap: 20px;
     color: white;
     height: 50%;
-    width: 50%;
+    width: 20%;
 }
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(2);
+    cursor: pointer;
+}
+
 
 input
 {
-    width: 40%;
+    width: 20%;
     padding: 10px;
     border-radius: 20px;
+    color: white;
+    text-align: center;
 }
 
 .todo-form > button
@@ -183,6 +191,7 @@ input:focus
 {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     height: auto;
 }
@@ -269,9 +278,10 @@ input:focus
 .todo-table-header-title
 {
     display: flex;
-    gap: 7rem;
-    padding-left: 10px;
-    width: 50%;
+    justify-content: space-around;
+    gap: 20rem;
+    padding-left: 30px;
+    width: 60%;
 }
 
 .todo-table-header-items
@@ -315,17 +325,16 @@ input:focus
 {
     display: flex;
     justify-content: space-around;
-    width: 5%;
+    gap: 20px;
 }
 
-.edit-btn
+.action .edit-btn
 {
-    background-color: transparent;
-    border: none;
+    color: grey;
     cursor: pointer;
 }
 
-.delete-btn
+.action > button
 {
     background-color: transparent;
     border: none;
@@ -342,11 +351,12 @@ input:focus
 
 .table-items-title
 {
-    width: 50%;
+    width: 60%;
     display:flex;
+    justify-content: space-around;
     align-items: center;
     padding-left: 20px;
-    gap: 5rem;
+    gap: 20rem;
 }
 
 .table-items-info
@@ -355,7 +365,8 @@ input:focus
     padding: 20px;
     justify-content: flex-end;
     gap: 5rem;
-    width: 40%;
+    width: 20%;
+    margin-left: auto;
 }
 
 .todo-title, .title

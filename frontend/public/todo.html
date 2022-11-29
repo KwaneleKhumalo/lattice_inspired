@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="./styles/todo.css">
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="./scripts/todo.js"></script>
@@ -15,39 +18,31 @@
 <body>
     <section>
 
-        <div class="container">
+        <div class="main-container">
             <div class="todo-list-container">
                 <i class="material-icons close-btn">close</i>             
                 <form class="todo-form" id="todo-submit">
                     <h1 style="margin-bottom: 5rem;">Add a Project</h1>
                     <label for="title"><strong>Project Title:</strong></label>
-                    <input type="text" placeholder="Title" name="todoTitle" class="todo-input" id="todo-title">
+                    <input type="text"name="todoTitle" class="todo-input" id="todo-title">
                     <label for="Description"><strong>Project Description:</strong></label>
-                    <input type="text" placeholder="Description" name="todoDesc" class="todo-input" id="todo-desc">
+                    <input type="text" name="todoDesc" class="todo-input" id="todo-desc">
                     <label for="title"><strong>Project Due Date:</strong></label>
                     <input type="date" name="dueDate" class="todo-input" id="todo-date">
-                    <button type="submit" class="submit-todo" >Add Item
+                    <button type="submit" class="submit-todo btn" >Add Item
                         <i class="material-icons">send</i>
                     </button>
                 </form>
             </div>
         </div>
 
-        <div class="container">
+        <div class="main-container">
             <div class="task-header">
-                <h1>Project Board</h1>
-                <button class="create-btn">Create
+                <h4>Project Board</h4>
+                <button class=" btn create-btn">Create
                     <i class="material-icons right">arrow_drop_down</i>
                 </button>
             </div>
-
-            <div class="todo-search">
-                <input class="todo-search-input" type="text" name="search-input" placeholder="Search Items...">
-                <button class="todo-search-filter-btn">filter
-                    <i class="material-icons right">filter_list</i>
-                </button>
-            </div>
-
             <hr class="container-divider">
         </div>
 
@@ -63,27 +58,10 @@
 
             <hr class="container-divider">
             <div class="todo-table" id="todo-table">
-                <!-- <div class="todo-table-header">
-                    <div class="todo-table-header-title">
-                        <strong class="action">Action</strong>
-                        <strong class="title">Title</strong>
-                        <strong class="table-desc">Description</strong>
-                    </div>
-                    <div class="todo-table-header-items">
-                        <strong>Date Created
-                            <i class="material-icons">unfold_more</i>
-                        </strong>
-                        <strong>Due Date
-                            <i class="material-icons">unfold_more</i>
-                        </strong>
-                    </div>
-                </div> -->
             </div>
             <hr class="container-divider">
 
             <div class="table-body-container" id="table-body-container">
-                
-               
             </div>
 
         </div>
@@ -93,17 +71,16 @@
         <div class="side-nav z-depth-3">
             <div class="top-nav-items">
                 <a href="index.html"> <i class="material-icons">dashboard</i>Dashboard</a>
-                <a href=""> <i class="material-icons">person</i>Profile</a>
-                <div class="divider">
-                    <hr>
-                </div>
                 <a href="todo.html"> <i class="material-icons">list</i>Daily Items</a>
-                <a href="goals.html"> <i class="material-icons">track_changes</i>Goals</a>
+                <!-- <a href="goals.html"> <i class="material-icons">track_changes</i>Goals</a> -->
             </div>
     
             <div class="bottom-nav-items">
-                <a class="profile-img"> <i class="material-icons profile-img">account_circle</i> </a>
+                <a href="profile.html" class="profile-img"> <i class="material-icons profile-img">account_circle</i> </a>
             </div>
         </div>
+
+        <script>
+        </script>
 </body>
 </html>
