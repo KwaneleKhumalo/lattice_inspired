@@ -1,0 +1,157 @@
+/* 
+ New Colors 
+
+ #234345 - Emerald Forest (side-nav, pending-task, search-icon)
+ #326063 - Under the Sea (header)
+ 
+*/
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-background: #326063;
+    --secondary-background: #234345;
+    --primary-text: #ebefef;
+}
+
+body
+{
+    /* Needed for responsiveness */
+    display:flex; 
+    flex-direction: row;
+}
+
+/*----------------------------------------------------------- Side Nav-------------------------- */
+.side-bar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--secondary-background);
+}
+
+
+.side-bar a
+{
+    display: flex;
+    color: var(--primary-text);
+}
+
+
+
+.logo-icon
+{
+    font-size: 50px;
+}
+
+
+.logo 
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-text);
+    text-transform: uppercase;
+
+}
+/*----------------------------------------------------------- section -------------------------- */
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-background);
+    height: 100vh;
+    width: 100%;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    color: var(--primary-text);
+}
+
+input
+{
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+}
+a:link 
+{
+    color: var(--primary-text);
+}
+a:visited 
+{
+    color: var(--primary-text);
+}
+
+button 
+{
+    width: 20%;
+    padding: 10px 20px;
+    margin-top: 50px;   
+    border-radius: 20px;
+    border: none;
+    background-color: var(--secondary-background);
+    color: var(--primary-text);
+}
+
+
+
+
+
+
+
+/*----------------------------------Media Queries-------------------------- */
+@media (prefers-color-scheme: light) {
+    
+    :root{
+        --primary-background: #ebefef;
+        --secondary-background: #adbfc1;
+        --primary-text: #234345;
+    }
+}
+/* Devices 768px and up */
+@media (min-width: 768px)
+{   
+    .side-nav {
+        width: auto;
+        padding: 0px;
+    }
+}
+
+/* Devices less than 768px */
+@media (max-width: 767.98px)
+{
+ .side-nav {
+        width: auto;
+        padding: 5px;
+    }
+
+    .side-nav a {
+        padding: 15px 10px;
+    }
+
+    .side-nav span {
+        display: none;
+    }
+
+}
+
+
