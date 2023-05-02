@@ -1,4 +1,4 @@
-** This is an express application inspired by Lattice (https://lattice.com/) **
+** This is my very first express application. The intention for this application was to get acquainted with node js/express and as well as mongoDb and understanding the architexture and workflow.  **
 
 1 - Download or Clone
 2 - Run NPM Install
